@@ -1,0 +1,158 @@
+{
+  "@context": {
+    "sedi": "https://w3id.org/sedimark/ontology#",
+    "dct": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "@vocab": "https://w3id.org/sedimark/ontology#"
+  },
+  "@graph": [
+    {
+      "@id": "schema:Self-Listing",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Self-Listing",
+      "rdfs:comment": "A self-listing for a data provider",
+      "rdfs:subClassOf": "owl:NamedIndividual",
+      "rdfs:properties": [
+        {"@id": "dct:title"},
+        {"@id": "dct:description"},
+        {"@id": "dct:issued"},
+        {"@id": "dct:modified"},
+        {"@id": "dct:creator"},
+        {"@id": "dct:publisher"},
+        {"@id": "dct:language"},
+        {"@id": "dct:rights"},
+        {"@id": "dct:hasPart"},
+        {"@id": "schema:belongsTo"},
+        {"@id": "schema:hasOffering"}
+      ]
+    },
+    {
+      "@id": "schema:Participant",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Participant",
+      "rdfs:comment": "An organization or entity that participates in the ecosystem",
+      "rdfs:subClassOf": "owl:NamedIndividual",
+      "rdfs:properties": [
+        {"@id": "dct:description"},
+        {"@id": "foaf:name"},
+        {"@id": "foaf:openid"},
+        {"@id": "foaf:homepage"},
+        {"@id": "foaf:account"},
+        {"@id": "schema:hasSelf-Listing"}
+      ]
+    },
+    {
+      "@id": "schema:Offering",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Offering",
+      "rdfs:comment": "A data offering provided by a participant",
+      "rdfs:subClassOf": "owl:NamedIndividual",
+      "rdfs:properties": [
+        {"@id": "dct:title"},
+        {"@id": "dct:description"},
+        {"@id": "dct:issued"},
+        {"@id": "dct:created"},
+        {"@id": "dct:language"},
+        {"@id": "dct:publisher"},
+        {"@id": "dct:creator"},
+        {"@id": "dct:isPartOf"},
+        {"@id": "dct:temporal"},
+        {"@id": "dcat:temporalResolution"},
+        {"@id": "dcat:dataset"},
+        {"@id": "schema:hasAsset"},
+        {"@id": "schema:hasOfferingContract"},
+        {"@id": "foaf:homepage"}
+      ]
+    },
+    {
+      "@id": "schema:DataAsset",
+      "@type": "rdfs:Class",
+      "rdfs:label": "DataAsset",
+      "rdfs:comment": "A specific data asset that contains sensor or other data",
+      "rdfs:subClassOf": "owl:NamedIndividual",
+      "rdfs:properties": [
+        {"@id": "dc:identifier"},
+        {"@id": "dc:title"},
+        {"@id": "dc:description"},
+        {"@id": "dc:creator"},
+        {"@id": "schema:hasAssetQuality"}
+      ]
+    },
+    {
+      "@id": "schema:Agreement",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Agreement",
+      "rdfs:comment": "An agreement regarding data usage",
+      "rdfs:subClassOf": "owl:NamedIndividual",
+      "rdfs:properties": [
+        {"@id": "schema:references"}
+      ]
+    },
+    {
+      "@id": "schema:OfferingContract",
+      "@type": "rdfs:Class",
+      "rdfs:label": "OfferingContract",
+      "rdfs:comment": "A contract governing the use of a data offering",
+      "rdfs:subClassOf": "owl:NamedIndividual"
+    },
+    {
+      "@id": "schema:AssetQuality",
+      "@type": "rdfs:Class",
+      "rdfs:label": "AssetQuality",
+      "rdfs:comment": "Quality information about a data asset",
+      "rdfs:subClassOf": "owl:NamedIndividual"
+    },
+    {
+      "@id": "dct:Location",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Location",
+      "rdfs:comment": "A physical location",
+      "rdfs:subClassOf": "owl:NamedIndividual"
+    },
+    {
+      "@id": "dct:PeriodOfTime",
+      "@type": "rdfs:Class",
+      "rdfs:label": "PeriodOfTime",
+      "rdfs:comment": "A period of time",
+      "rdfs:subClassOf": "owl:NamedIndividual"
+    },
+    {
+      "@id": "dcat:Catalog",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Catalog",
+      "rdfs:comment": "A catalog of data assets",
+      "rdfs:subClassOf": "owl:NamedIndividual"
+    },
+    {
+      "@id": "dct:LicenseDocument",
+      "@type": "rdfs:Class",
+      "rdfs:label": "LicenseDocument",
+      "rdfs:comment": "A license document",
+      "rdfs:subClassOf": "owl:NamedIndividual",
+      "rdfs:properties": [
+        {"@id": "dct:rights"},
+        {"@id": "dct:license"}
+      ]
+    },
+    {
+      "@id": "foaf:Document",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Document",
+      "rdfs:subClassOf": "owl:NamedIndividual"
+    },
+    {
+      "@id": "foaf:OnlineAccount",
+      "@type": "rdfs:Class",
+      "rdfs:label": "OnlineAccount",
+      "rdfs:subClassOf": "owl:NamedIndividual",
+      "rdfs:properties": [
+        {"@id": "foaf:accountName"}
+      ]
+    }
+  ]
+}

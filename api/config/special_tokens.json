@@ -1,0 +1,110 @@
+{
+    "additional_special_tokens": [
+        "<|ontology|>", "<|/ontology|>",
+        "<|schema|>", "<|/schema|>",
+        "<|context|>", "<|/context|>",
+        "<|json_output|>", "<|/json_output|>",
+        "[CONTEXT_EMBEDDED]", "[JSON_START]", "[JSON_END]",
+        
+        "\"@context\"", "\"@graph\"", "\"@id\"", "\"@type\"",
+        "\"@value\"", "\"@language\"", "\"@list\"", "\"@set\"",
+        "\"@reverse\"", "\"@index\"", "\"@base\"", "\"@vocab\"",
+        "\"@container\"", "\"@version\"", "\"@protected\"",
+        
+        "rdf:type", "rdfs:Class", "rdfs:subClassOf", 
+        "rdfs:domain", "rdfs:range", "rdfs:label",
+        "rdfs:comment", "rdfs:seeAlso", "rdfs:isDefinedBy",
+        "rdfs:Literal", "rdfs:Resource", "rdfs:subPropertyOf",
+        
+        "owl:Class", "owl:ObjectProperty", "owl:DatatypeProperty",
+        "owl:NamedIndividual", "owl:FunctionalProperty", 
+        "owl:InverseFunctionalProperty", "owl:TransitiveProperty",
+        "owl:SymmetricProperty", "owl:Ontology", "owl:imports",
+        "owl:versionInfo", "owl:equivalentClass", "owl:disjointWith",
+        "owl:unionOf", "owl:intersectionOf", "owl:oneOf",
+        "owl:allValuesFrom", "owl:someValuesFrom", "owl:hasValue",
+        "owl:cardinality", "owl:minCardinality", "owl:maxCardinality",
+        "owl:inverseOf", "owl:propertyChainAxiom",
+        
+        "xsd:string", "xsd:boolean", "xsd:decimal", "xsd:float",
+        "xsd:double", "xsd:integer", "xsd:long", "xsd:int",
+        "xsd:short", "xsd:byte", "xsd:nonNegativeInteger",
+        "xsd:positiveInteger", "xsd:nonPositiveInteger",
+        "xsd:negativeInteger", "xsd:dateTime", "xsd:date",
+        "xsd:time", "xsd:duration", "xsd:anyURI",
+        
+        "sedimark:Asset", "sedimark:DataAsset", "sedimark:AIModelAsset",
+        "sedimark:ServiceAsset", "sedimark:OtherAsset", "sedimark:Offering",
+        "sedimark:Self-Listing", "sedimark:AssetProvision", 
+        "sedimark:AssetQuality", "sedimark:Agreement",
+        "sedimark:OfferingContract", "sedimark:Participant",
+        
+        "sedimark:hasAsset", "sedimark:hasOffering", "sedimark:hasSelf-Listing",
+        "sedimark:hasAssetQuality", "sedimark:hasOfferingContract",
+        "sedimark:belongsTo", "sedimark:isProvidedBy", "sedimark:references",
+        "sedimark:isListedBy", "sedimark:algorithm", "sedimark:category",
+        "sedimark:execution", "sedimark:handlesStream", "sedimark:inputFormat",
+        "sedimark:outputFormat", "sedimark:serialization", "sedimark:inputParameters",
+        
+        "dcat:Dataset", "dcat:Distribution", "dcat:Catalog",
+        "dcat:Resource", "dcat:DataService", "dcat:theme",
+        "dcat:accessURL", "dcat:downloadURL", "dcat:mediaType",
+        "dcat:byteSize", "dcat:temporalResolution", "dcat:startDate",
+        "dcat:endDate", "dcat:spatial", "dcat:temporal",
+        "dcat:keyword", "dcat:landingPage", "dcat:qualifiedRelation",
+        "dcat:hadRole", "dcat:servesDataset", "dcat:endpointURL",
+        "dcat:endpointDescription", "dcat:conformsTo",
+        
+        "dqv:QualityMeasurement", "dqv:Metric", "dqv:Dimension",
+       "dqv:Category", "dqv:computedOn", "dqv:isMeasurementOf",
+       "dqv:value", "dqv:hasQualityMeasurement", "dqv:inDimension",
+       "dqv:inCategory", "dqv:expectedDataType",
+       
+       "dcterms:title", "dcterms:description", "dcterms:creator",
+       "dcterms:contributor", "dcterms:publisher", "dcterms:issued",
+       "dcterms:modified", "dcterms:identifier", "dcterms:language",
+       "dcterms:license", "dcterms:rights", "dcterms:format",
+       "dcterms:source", "dcterms:subject", "dcterms:temporal",
+       "dcterms:spatial", "dcterms:created", "dcterms:valid",
+       "dcterms:available", "dcterms:conformsTo", "dcterms:hasPart",
+       "dcterms:isPartOf", "dcterms:hasVersion", "dcterms:isVersionOf",
+       "dcterms:references", "dcterms:isReferencedBy", "dcterms:replaces",
+       "dcterms:isReplacedBy", "dcterms:relation", "dcterms:coverage",
+       "dcterms:audience", "dcterms:accrualPeriodicity",
+       
+       "foaf:Agent", "foaf:Person", "foaf:Organization", "foaf:Document",
+       "foaf:OnlineAccount", "foaf:name", "foaf:homepage", "foaf:mbox",
+       "foaf:openid", "foaf:accountName", "foaf:accountServiceHomepage",
+       "foaf:img", "foaf:page", "foaf:primaryTopic", "foaf:logo",
+       
+       "skos:Concept", "skos:ConceptScheme", "skos:prefLabel",
+       "skos:altLabel", "skos:definition", "skos:notation",
+       "skos:broader", "skos:narrower", "skos:related",
+       "skos:inScheme", "skos:topConceptOf", "skos:hasTopConcept",
+       "skos:exactMatch", "skos:closeMatch", "skos:relatedMatch",
+       "skos:broadMatch", "skos:narrowMatch", "skos:note",
+       "skos:scopeNote", "skos:editorialNote", "skos:changeNote",
+       
+       "odrl:Policy", "odrl:Asset", "odrl:Party", "odrl:Action",
+       "odrl:Permission", "odrl:Prohibition", "odrl:Duty",
+       "odrl:Constraint", "odrl:target", "odrl:assignee",
+       "odrl:assigner", "odrl:action", "odrl:constraint",
+       "odrl:Agreement", "odrl:Offer", "odrl:Set",
+       
+       "prov:Activity", "prov:Entity", "prov:Agent",
+       "prov:wasGeneratedBy", "prov:wasDerivedFrom",
+       "prov:wasAttributedTo", "prov:used", "prov:wasAssociatedWith",
+       "prov:actedOnBehalfOf", "prov:wasInformedBy",
+       "prov:startedAtTime", "prov:endedAtTime", "prov:atLocation",
+       
+       "http://www.w3.org/", "https://w3id.org/", "http://purl.org/",
+       "http://xmlns.com/", "http://schema.org/",
+       
+       "\"@prefix\"", "\"@base\"", "\"@vocab\"",
+       
+       "_:genid", "_:b", "_:node",
+       
+       "\"@explicit\"", "\"@default\"", "\"@embed\"", "\"@omitDefault\"",
+       "\"@requireAll\"", "\"@frameDefault\""
+   ]
+}

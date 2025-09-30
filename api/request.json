@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a valid structure JSON-LD for the user input that has all entities and their relations.",
+    "user_input": "User: Smart-lock entry logs | Location: Tokyo | Devices: 120 doors | Period: 2023-03-01 to 2025-04-26 | Updates: real-time",
+    "max_new_tokens": 8192,
+    "temperature": 0.06,
+    "top_p": 0.95,
+    "top_k": 55,
+    "repetition_penalty": 2.0,
+    "num_beams": 6,
+    "early_stopping": true,
+    "length_penalty": 1.2,
+    "no_repeat_ngram_size": 1,
+    "do_sample": true
+  }

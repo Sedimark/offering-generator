@@ -1,0 +1,10 @@
+accelerate==1.10.1
+fastapi==0.118.0
+gradio==5.47.2
+numpy==2.3.3
+peft==0.17.1
+psutil==7.1.0
+pydantic==2.11.9
+PyJWT==2.10.1
+transformers==4.56.2
+uvicorn==0.37.0
