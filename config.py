@@ -39,7 +39,7 @@ CONFIG = {
     # Gradio configuration
     "gradio": {
         "port": 7860,
-        "share": False,
+        "share": True,
     },
 
     # Output configuration
