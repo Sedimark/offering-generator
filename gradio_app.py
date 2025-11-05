@@ -191,7 +191,7 @@ Valid JSON: Yes"""
 
             # Status
             status_html = f"""
-            <div style="background: #2a2a2a; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+            <div style="background: #fef2f; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
                 <h3>System Status</h3>
                 <p><strong>Model:</strong> {'✅ Ready' if model_loaded else '❌ Failed to Load'}</p>
                 <p><strong>Type:</strong> PEFT/LoRA Fine-tuned (SEDIMARK-Optimized)</p>
