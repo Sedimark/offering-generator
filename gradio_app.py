@@ -79,11 +79,11 @@ class GradioSEDIMARKApp:
             # Metrics for display
             metrics = self._calculate_metrics(offering_json, gen_time)
 
-            return offering_json, validation, stats, metrics
+            return offering_json, validation, stats, *metrics
 
         except Exception as e:
             error_msg = f"Generation failed: {str(e)}"
-            return error_msg, error_msg, error_msg, self._empty_metrics()
+            return error_msg, error_msg, error_msg, *self._empty_metrics()
 
     def _validate_offering(self, offering: Dict[str, Any]) -> str:
         """Validate offering structure"""
@@ -191,7 +191,7 @@ Valid JSON: Yes"""
 
             # Status
             status_html = f"""
-            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+            <div style="background: #2a2a2a; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
                 <h3>System Status</h3>
                 <p><strong>Model:</strong> {'✅ Ready' if model_loaded else '❌ Failed to Load'}</p>
                 <p><strong>Type:</strong> PEFT/LoRA Fine-tuned (SEDIMARK-Optimized)</p>
