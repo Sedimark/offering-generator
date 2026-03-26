@@ -65,7 +65,7 @@ sedimark-clean/
 └── outputs/            # Generated offerings (auto-created)
 ```
 
-## Configuration
+## Configs
 
 Edit `config.py` to customize:
 
